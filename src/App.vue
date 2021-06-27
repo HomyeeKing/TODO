@@ -45,16 +45,11 @@ const todoOp = {
 }
 
 
-const deleteMany = ()=>{
-    todos.filter((_,index)=>!finished.includes(index))
-}
-const select = (todo:Todo)=>{
-}
 
 
 
 const toggleSelect = ()=>{
-    const nodes = Array.from(document.querySelectorAll('.checkbox'))
+    const nodes = Array.from(document.querySelectorAll('.checkbox'))as any[]
     
     nodes.map(item=>item.checked = !item.checked)
 }
