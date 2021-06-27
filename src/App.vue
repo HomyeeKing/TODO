@@ -14,11 +14,11 @@ const todoStorage = {
         localStorage.setItem(KEY,JSON.stringify(todos))
     },
     fetchTodo(){
-        return JSON.parse(localStorage.getItem(KEY) || '')
+        return JSON.parse(localStorage.getItem(KEY) ?? '[]')
     }
 }
 const text = ref('')
-const todos = reactive<Todo[]>(todoStorage.fetchTodo() || [])
+const todos = reactive<Todo[]>(todoStorage.fetchTodo())
 const finished = reactive<Todo[]>([])
 
 watch(todos,(val)=>{
