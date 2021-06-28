@@ -113,7 +113,7 @@ const toggleSelect = ()=>{
                  @mouseenter="showCreateTime(todo)"
                  @mouseleave="todo.text = prevTodo"
                  @touchstart="showCreateTime(todo)"
-                 @touchcancel="todo.text = prevTodo"
+                 @touchend="todo.text = prevTodo"
                  >⏲</span>
                  
             </li>
